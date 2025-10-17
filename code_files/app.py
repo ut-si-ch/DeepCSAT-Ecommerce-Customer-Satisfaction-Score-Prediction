@@ -11,12 +11,16 @@ import joblib
 # ------------------------------
 @st.cache_resource
 def load_model_and_utils():
+    model_path = "code_files/best_model_balanced.pth"
+    scaler_path = "code_files/scaler.pkl"
+    encoder_path = "code_files/label_encoder.pkl"
+    
     model = DeepCSATNet(input_dim=397, hidden_dim=256, output_dim=5)
-    model.load_state_dict(torch.load("best_model_balanced.pth", map_location=torch.device("cpu")))
+    model.load_state_dict(torch.load(model_path, map_location=torch.device("cpu")))
     model.eval()
 
-    scaler = joblib.load("scaler.pkl")
-    label_encoder = joblib.load("label_encoder.pkl")
+    scaler = joblib.load(scaler_path)
+    label_encoder = joblib.load(encoder_path)
     return model, scaler, label_encoder
 
 # ------------------------------
