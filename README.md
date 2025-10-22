@@ -2,7 +2,7 @@
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python) ![Deep Learning](https://img.shields.io/badge/Deep%20Learning-PyTorch-red?logo=pytorch) ![NLP](https://img.shields.io/badge/NLP-SentenceTransformers-yellow) ![EDA](https://img.shields.io/badge/EDA-Seaborn%2C%20Matplotlib-orange) ![Deployment](https://img.shields.io/badge/Deployment-Streamlit%2C%20Joblib-purple)  
 
 > **Goal:** Build a deep learning-based ANN model to predict customer satisfaction (CSAT) scores from customer interactions and feedback.  
-> This project extends [Flipkart CSAT Prediction (v1)](#flipkart-customer-service-satisfaction-prediction-v1) using **PyTorch**, **text embeddings**, and **SHAP explainability** for deeper insights.  
+> This project extends [Flipkart CSAT Prediction (v1)](https://github.com/ut-si-ch/Flipkart-Customer-Service-Satisfaction-Classification.git) using **PyTorch**, **text embeddings**, and **SHAP explainability** for deeper insights.  
 
 ---
 
@@ -164,7 +164,7 @@ These enhancements will transform DeepCSAT into an **enterprise-grade, explainab
 
 ## 🔗 Flipkart Customer Service Satisfaction Prediction (v1)  
 > The DeepCSAT model builds upon the foundational ML workflow from the previous Flipkart CSAT project.  
-🔗 [View Flipkart CSAT ML Version (v1)](https://github.com/uttamsinghchaudhary/Flipkart_Customer_Service_Satisfaction_Prediction)  
+🔗 [View Flipkart CSAT ML Version (v1)](https://github.com/ut-si-ch/Flipkart-Customer-Service-Satisfaction-Classification.git)  
 
 | Aspect | Flipkart v1 | DeepCSAT v2 |
 |--------|--------------|--------------|
