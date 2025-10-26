@@ -128,7 +128,7 @@ Deployed via **Streamlit Cloud App**
 - Visual class probability chart  
 - SHAP insights tab for feature-level interpretation  
 
-🔗 **[Live Demo (Coming Soon)](#)**  
+🔗 **[StreamLit Demo](https://drive.google.com/file/d/1smwhkOPEiPV6GDwo1GnwLotdAV1VRJ8F/view?usp=sharing)**  
 
 ---
 
