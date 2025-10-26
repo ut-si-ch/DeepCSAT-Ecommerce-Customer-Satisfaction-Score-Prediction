@@ -60,7 +60,9 @@ By integrating **semantic text embeddings** from transformer models with traditi
 - Standardized column names and formats  
 - Converted timestamps to datetime; derived `response_delay_hrs`  
 - Filled missing text fields with placeholder tokens  
-- Normalized categorical strings  
+- Normalized categorical strings
+- performed embeddings on text data
+- applied PCA for dimenionality reduction
 
 ---
 
@@ -78,9 +80,9 @@ By integrating **semantic text embeddings** from transformer models with traditi
 
 | Layer | Type | Size | Activation |
 |-------|------|------|-------------|
-| Input | Linear | 397 | — |
-| Hidden-1 | Linear + BatchNorm + Dropout(0.3) | 256 | ReLU |
-| Hidden-2 | Linear + BatchNorm + Dropout(0.3) | 128 | ReLU |
+| Input | Linear | 113 | — |
+| Hidden-1 | Linear + BatchNorm + Dropout(0.3) | 512 | ReLU |
+| Hidden-2 | Linear + BatchNorm + Dropout(0.3) | 512 | ReLU |
 | Output | Linear | 5 | Softmax |
 
 **Training Details:**  
@@ -96,10 +98,10 @@ By integrating **semantic text embeddings** from transformer models with traditi
 
 | Metric | Value |
 |--------|--------|
-| **Accuracy** | 85% |
-| **Macro-F1** | 0.81 |
-| **Validation Loss** | Converged ~10th epoch |
-| **Model File** | `best_model_balanced.pth` |
+| **Accuracy** | ~72% |
+| **Macro-F1** | 0.25 |
+| **Validation Loss** | Converged ~11th epoch |
+| **Model File** | `best_model_balanced_3.pth` |
 
 **Insights:**  
 - High confidence on extreme CSAT classes (1 and 5)  
@@ -112,7 +114,7 @@ Used **SHAP (SHapley Additive Explanations)** for interpretability.
 
 | **Global SHAP Summary** | **Single Prediction Waterfall** |
 |:---:|:---:|
-| <img width="400" src="https://github.com/user-attachments/assets/example_shap_summary.png" /> | <img width="400" src="https://github.com/user-attachments/assets/example_shap_waterfall.png" /> |
+| <img width="400" src="https://github.com/user-attachments/assets/79755b76-d80d-4412-b020-ad019d9a0699"" /> | <img width="400" src="https://github.com/user-attachments/assets/79755b76-d80d-4412-b020-ad019d9a0699"" /> |
 
 - **Global Analysis:** Identifies key drivers of satisfaction/dissatisfaction  
 - **Local Analysis:** Explains specific customer outcomes  
@@ -138,11 +140,11 @@ Deployed via **Streamlit Cloud App**
 |--------|------|-----------|-------|
 | Logistic Regression | Baseline | 78% | Simple linear model |
 | Random Forest | ML Ensemble | 82% | Strong structured feature learning |
-| **DeepCSAT (ANN)** | Deep Learning | **85%** | Combines text & structured features |
+| **DeepCSAT (ANN)** | Deep Learning | **72%** | Combines text & structured features |
 
-✅ Enhanced CSAT prediction accuracy  
-✅ Integrated explainability (SHAP)  
-✅ Deployment-ready Streamlit interface  
+- Added more Accountability in CSAT prediction accuracy  
+- Integrated explainability (SHAP)  
+- Deployment-ready Streamlit interface  
 
 ---
 
